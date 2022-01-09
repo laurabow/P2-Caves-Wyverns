@@ -28,34 +28,32 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 {
   "records": [
     {
-      "id": "recONRzIUTuZ5lXaF",
+      "id": "rec8qlEvsMMavT9Yp",
       "fields": {
-        "author": "Liz Yrineo",
-        "setup": "Why did the tomato turn red?",
-        "punchline": "Because it saw the salad dressing!"
+        "name": "Penitente",
+        "class": "Knight",
+        "description": "A strong, silent knight who adventures through the lands of CoolFantasyName protecting the lives of the innocent to fulfill his oath of protection so ...",
+        "health": 50
       },
-      "createdTime": "2020-11-30T16:03:09.000Z"
+      "createdTime": "2022-01-09T21:44:15.000Z"
     },
     {
-      "id": "rec3oYZ5Tp0AIDsKe",
+      "id": "rec9yFVbBpDFPMyPA",
       "fields": {
-        "author": "Rachel Moskowitz",
-        "setup": "What did the green grape say to the red grape?",
-        "punchline": "Breathe, idiot, breathe!"
+        "name": "Nyx",
+        "class": "Thief",
+        "description": "A sneak, mischievous thief who got caught in the act and in an attempt to redeem herself, she has taken to adventuring to become a better person",
+        "health": 50
       },
-      "createdTime": "2020-11-30T16:03:09.000Z"
+      "createdTime": "2022-01-09T21:44:15.000Z"
     },
     {
-      "id": "recA34tOaoE1IVeC1",
-      "fields": {
-        "author": "Gary Grant",
-        "setup": "How do you make holy water?",
-        "punchline": "You boil the hell out of it!"
-      },
-      "createdTime": "2020-11-30T16:03:09.000Z"
+      "id": "reciflMDokJ2ezMME",
+      "fields": {},
+      "createdTime": "2022-01-09T21:44:15.000Z"
     }
   ],
-  "offset": "recA34tOaoE1IVeC1"
+  "offset": "itrGqA9fh32c3xojU/reciflMDokJ2ezMME"
 }
 ```
 

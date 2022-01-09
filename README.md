@@ -14,11 +14,11 @@ A dice based fantasy combat game.
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+[Wireframe](https://whimsical.com/caves-wyverns-8g8PVbFBYJi19tdEJJdFpa)
 
 ## Component Hierarchy
 
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+[Hierarchy](https://whimsical.com/hierarchy-JwfSRkHDmka2EjrrHtjyM5)
 
 ## API and Data Sample
 
@@ -73,6 +73,8 @@ _These are examples only. Replace with your own MVP features._
 - Have an opponent for the fight
 - have a dice mechanic in the game
 - have a randomized dice mechanic for the opponent.
+- show Health points for the PC
+- you win/lose at the end of the battle
 
 #### PostMVP
 
@@ -83,7 +85,7 @@ _These are examples only. Replace with your own Post-MVP features._
 - have a way for the player to create their own character to play with
 - Make the player characters and opponents more complex with attributes that can add modifiers to the dice rolls
 - Add a way for players to level up and more difficult opponents for them to face.
-- create a narrative element to multiple battles to make the game more immersive.
+- create a narrative element to multiple battles to make the game more immersive. (create a story campaign for the player to go through
 
 ## Project Schedule
 

@@ -29,6 +29,7 @@ export default function Battle(props) {
   //   fetchMonster();
   // }, []);
 
+  // fetches the character chose by the player:
   useEffect(() => {
     const fetchCharacter = async () => {
       const res = await api.get("/");
@@ -40,6 +41,7 @@ export default function Battle(props) {
     fetchCharacter();
   }, [props.chosenCharacter]);
 
+  // returns the image & name of the chosen character
   return (
     <div>
       <h1>Battle Arena!</h1>

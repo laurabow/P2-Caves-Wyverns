@@ -6,7 +6,7 @@ A dice based combat game
 
 ## Project Name
 
-Cave & Wyverns
+Caves & Wyverns
 
 ## Project Description
 
@@ -21,8 +21,6 @@ A dice based fantasy combat game.
 [Hierarchy](https://whimsical.com/hierarchy-JwfSRkHDmka2EjrrHtjyM5)
 
 ## API and Data Sample
-
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This **must** be properly formatted. An example is below:
 
 ```json
 {
@@ -59,11 +57,7 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MVP and PostMVP. Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.
-
 #### MVP
-
-_These are examples only. Replace with your own MVP features._
 
 - Find and use external api
 - Render data on page
@@ -75,8 +69,6 @@ _These are examples only. Replace with your own MVP features._
 - you win/lose at the end of the battle
 
 #### PostMVP
-
-_These are examples only. Replace with your own Post-MVP features._
 
 - Add more character options for the player
 - have more than one opponent that is randomly chosen to challenge the player
@@ -91,7 +83,7 @@ This schedule will be used to keep track of your progress throughout the week an
 
 | Day    | Deliverable                                        | Status     |
 | ------ | -------------------------------------------------- | ---------- |
-| Jan 9  | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
+| Jan 9  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
 | Jan 10 | Project Approval                                   | Incomplete |
 | Jan 11 | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
 | Jan 14 | Pseudocode / actual code                           | Incomplete |

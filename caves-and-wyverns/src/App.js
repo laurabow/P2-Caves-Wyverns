@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Characters from "./components/Characters";
 import WelcomePage from "./components/WelcomePage";
 import Rules from "./components/Rules";
+import Battle from "./components/Battle";
 import api from "./services/apiConfig";
 
 import './App.css';
@@ -18,7 +19,7 @@ function App() {
         <Route path={"/"} element={<WelcomePage />} />
         <Route path={"/characters"} element={<Characters />} />
         <Route path={"/rules"} element={<Rules />} />
-        {/* <Route path={"/battle"} element={<div>Battle</div>} /> */}
+        <Route path={"/battle"} element={<Battle />} />
       </Routes>
     </div>
   );

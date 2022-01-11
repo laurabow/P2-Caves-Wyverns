@@ -7,7 +7,7 @@ import Monster from './Monster';
 
 export default function Battle(props) {
 
-  const [monster, setMonster] = useState({});
+  const [monster, setMonster] = useState([]);
   const [character, setCharacter] = useState({});
   const { id } = useParams();
 
@@ -23,8 +23,8 @@ export default function Battle(props) {
   // this is coming up as undefined...
   useEffect(() => {
     const fetchMonster = async () => {
-      const res = await api2.get("/");
-      console.log(res.data.records);
+      const res = await api2.get();
+      console.log(res.data);
       setMonster(res.data.records);
     }
     fetchMonster();
@@ -56,7 +56,7 @@ export default function Battle(props) {
         <img style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
       </div>
       
-        {/* <div>
+        <div>
           {monster.map((monster) => {
             return (
               
@@ -66,9 +66,9 @@ export default function Battle(props) {
                   <h3>{monster.fields?.class}</h3>
                   <p>{monster.fields?.description}</p>
                 </div>
-            )
-          })}
-      </div> */}
+              )
+            })}
+        </div>
 
       {/* <div className="monster">
         <Monster />

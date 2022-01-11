@@ -7,7 +7,7 @@ import Monster from './Monster';
 
 export default function Battle(props) {
 
-  const [monster, setMonster] = useState([]);
+  const [monster, setMonster] = useState({});
   const [character, setCharacter] = useState({});
   const { id } = useParams();
 
@@ -21,14 +21,14 @@ export default function Battle(props) {
   // need to ad .post for player character selection somewhere
 
   // this is coming up as undefined...
-  // useEffect(() => {
-  //   const fetchMonster = async () => {
-  //     const res = await api2.get("/");
-  //     console.log(res.data.records);
-  //     setMonster(res.data.records);
-  //   }
-  //   fetchMonster();
-  // }, []);
+  useEffect(() => {
+    const fetchMonster = async () => {
+      const res = await api2.get("/");
+      console.log(res.data.records);
+      setMonster(res.data.records);
+    }
+    fetchMonster();
+  }, []);
 
   // fetches the character chose by the player:
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function Battle(props) {
         <img style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
       </div>
       
-        {/* <div id="monster">
+        {/* <div>
           {monster.map((monster) => {
             return (
               

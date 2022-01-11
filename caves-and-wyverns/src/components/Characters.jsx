@@ -21,26 +21,12 @@ export default function Characters(props) {
     fetchCharacters();
   }, []);
 
-  // useEffect(() => {
-  //   const fetchFighter = async () => {
-  //     const res = await api.get(`/${id}`)
-  //     console.log(res.data);
-  //     setFighter(res.data);
-  //   };
-  //   fetchFighter();
-  // }, []);
-
 
   // this function navigates to the next page and puts the 
   // character chosen by the player onto the battle page
   const handleClick = async (e) => {
     props.setChosenCharacter(e.target.id);
     console.log(e.target.id);
-    // need to put something different where {fields} is!
-    // figter = { character.fields?.name }
-    // img = { character.fields?.image }
-    // const res = await api.post("/battle", { name, img });
-    // navigate to battle instead?
     navigate("/rules");
   };
 
@@ -48,7 +34,6 @@ export default function Characters(props) {
   return (
     <div>
       <h1>Choose your fighter! Choose wisely...</h1>
-      {/* <form > */}
         <ul>
           {characters.map((character) => {
             return (
@@ -65,7 +50,6 @@ export default function Characters(props) {
             )
           })}
         </ul>
-      {/* </form> */}
     </div>
   )
 }

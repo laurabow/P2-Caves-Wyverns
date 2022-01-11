@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, Link, useParams } from 'react-router-dom';
 import api from '../services/apiConfig';
 import api2 from '../services/apiConfig/index2';
+import Monster from './Monster';
 // import Health from './Health';
 
 export default function Battle(props) {
@@ -54,21 +55,25 @@ export default function Battle(props) {
         <h2 id={character.id}>{character.fields?.name}</h2>
         <img style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
       </div>
-      {/* <ul>
-        <div id="monster">
+      
+        {/* <div id="monster">
           {monster.map((monster) => {
             return (
-              <li key={monster.id}>
-                <div>
+              
+                <div key={monster.id}>
                   <h2>{monster.fields?.name}</h2>
+                  <img id={monster.id} style={{width: "200px"}} src={monster.fields?.image} alt={monster.fields?.name} />
                   <h3>{monster.fields?.class}</h3>
                   <p>{monster.fields?.description}</p>
                 </div>
-              </li>
             )
           })}
-        </div>
-      </ul> */}
+      </div> */}
+
+      {/* <div className="monster">
+        <Monster />
+      </div> */}
+      
       <button>Attack!</button>
       <button onClick={handleClick}>go home placeholder button</button>
     </div>

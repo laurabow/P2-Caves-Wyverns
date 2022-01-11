@@ -5,3 +5,23 @@
 a {
   text-decoration: none;
 }
+
+/* welcome page styling: */
+#welcome-page {
+  background-image: url("https://artbreeder.b-cdn.net/imgs/d46a830c4752d0d835239d5b82f4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title {
+  padding: 50px;
+}
+
+#welcome {
+  display: flex;
+  margin: 100px;
+}
+
+#choose-fighter {
+  margin: 100px;
+}

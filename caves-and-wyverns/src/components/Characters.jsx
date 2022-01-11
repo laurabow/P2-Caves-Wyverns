@@ -40,10 +40,10 @@ export default function Characters(props) {
               <li key={character.id}>
                 {/* <Link to={'/rules'}> */}
                 <div id={character.id} onClick={handleClick}>
-                    <h2 id={character.id}>{character.fields?.name}</h2>
-                    <img id={character.id} style={{width: "200px"}} src={character.fields?.image} alt={character.fields?.name} />
-                    <h3 id={character.id}>{character.fields?.class}</h3>
-                    <p id={character.id}>{character.fields?.description}</p>
+                    <h2 className="name" id={character.id}>{character.fields?.name}</h2>
+                    <img className="picture" id={character.id} style={{width: "200px"}} src={character.fields?.image} alt={character.fields?.name} />
+                    <h3 className="class" id={character.id}>{character.fields?.class}</h3>
+                    <p className="description" id={character.id}>{character.fields?.description}</p>
                   </div>
                 {/* </Link> */}
               </li>

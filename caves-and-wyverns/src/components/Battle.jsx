@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link, useParams } from 'react-router-dom';
+import Dice from "react-dice-roll";
 import api from '../services/apiConfig';
 import api2 from '../services/apiConfig/index2';
-import Monster from './Monster';
 // import Health from './Health';
 
 export default function Battle(props) {
@@ -42,39 +42,46 @@ export default function Battle(props) {
     fetchCharacter();
   }, [props.chosenCharacter]);
 
+  // const onRoll = () => {
+  //   if ()
+  // }
+
   // returns the image & name of the chosen character
   return (
     <div>
-      <h1>Battle Arena!</h1>
+      <h1>Wind Hollow Cave</h1>
+
       <div>
-        <h4>PC picture with health bar and NPC opponent/monster go on this page</h4>
-        <h4>Dice mechanics happen on this page!</h4>
-        <h5>once the pc or the monster die, the game is over! Show win/lose message and then navigate back to homepage</h5>
+        <h2 className="battle-name" id={character.id}>{character.fields?.name}</h2>
+        <img className="battle-pic" style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
+        <h3>Life Force: {character.fields?.health}</h3>
       </div>
-      <div>
-        <h2 id={character.id}>{character.fields?.name}</h2>
-        <img style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
+
+      <div id="player-dice">
+      <Dice size="70" onRoll={(value) => console.log(value)} />
       </div>
-      
+      <div id="monster-dice">
+      {/* <Dice onRoll={(value) => console.log(value)} /> */}
+      </div>
+
+      {/* if only one monster, don't need to map */}
         <div>
           {monster.map((monster) => {
             return (
               
                 <div key={monster.id}>
-                  <h2>{monster.fields?.name}</h2>
-                  <img id={monster.id} style={{width: "200px"}} src={monster.fields?.image} alt={monster.fields?.name} />
-                  <h3>{monster.fields?.class}</h3>
-                  <p>{monster.fields?.description}</p>
+                  <h2 id="monster-name">{monster.fields?.name}</h2>
+                  <img className="monster-pic" id={monster.id} style={{width: "200px"}} src={monster.fields?.image} alt={monster.fields?.name} />
+                <h3 className="monster-class">{monster.fields?.class}</h3>
+                <h3>{monster.fields?.health}</h3>
+                  <p className="monster-description">{monster.fields?.description}</p>
                 </div>
               )
             })}
         </div>
-
-      {/* <div className="monster">
-        <Monster />
-      </div> */}
-      
-      <button>Attack!</button>
+{/* potential new button to roll dice on click: */}
+      {/* <button id="attack-btn" onRoll={onRoll}>Attack!</button> */}
+      <button id="attack-btn">Attack!</button>
       <button onClick={handleClick}>go home placeholder button</button>
     </div>
   )

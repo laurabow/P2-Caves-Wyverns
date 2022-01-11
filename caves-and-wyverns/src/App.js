@@ -5,6 +5,7 @@ import WelcomePage from "./components/WelcomePage";
 import Rules from "./components/Rules";
 import Battle from "./components/Battle";
 // import api from "./services/apiConfig";
+// import Dice from "react-dice-roll";
 
 import './App.css';
 

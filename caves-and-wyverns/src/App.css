@@ -1,5 +1,17 @@
+/* welcome font: */
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+/* contract font: */
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap");
+/* font-family: 'Moon Dance', cursive; */
+
 .App {
   text-align: center;
+}
+
+body {
+  background-image: url("https://artbreeder.b-cdn.net/imgs/d46a830c4752d0d835239d5b82f4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -8,9 +20,7 @@ a {
 
 /* welcome page styling: */
 #welcome-page {
-  background-image: url("https://artbreeder.b-cdn.net/imgs/d46a830c4752d0d835239d5b82f4.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-family: "Luxurious Roman", cursive;
 }
 
 #title {
@@ -19,9 +29,42 @@ a {
 
 #welcome {
   display: flex;
-  margin: 100px;
+  /* margin: 500px; */
+  margin: 50px 400px 100px 400px;
+  padding: 10px;
+  background-color: whitesmoke;
+  opacity: 0.4;
+  border-radius: 8px;
 }
 
 #choose-fighter {
-  margin: 100px;
+  font-family: "Luxurious Roman", cursive;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+}
+
+/* choose your fighter styling: */
+
+.choose {
+  font-family: "Luxurious Roman", cursive;
+}
+
+.character-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.picture {
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px;
+}
+
+.description {
+  background-color: whitesmoke;
+  opacity: 0.4;
+  border-radius: 8px;
+  margin-left: 150px;
+  margin-right: 150px;
 }

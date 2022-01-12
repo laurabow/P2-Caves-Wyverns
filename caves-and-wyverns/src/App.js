@@ -22,6 +22,7 @@ function App() {
   // console.log(process.env.REACT_APP_AIRTABLE_KEY2);
 
   return (
+    <body className="body">
     <div className="App">
       <Routes>
         <Route path={"/"} element={<WelcomePage />} />
@@ -30,7 +31,8 @@ function App() {
         <Route path={"/battle"} element={<Battle chosenCharacter={chosenCharacter} />} />
         <Route path={"/roller"} element={<Roller />} />
       </Routes>
-    </div>
+      </div>
+      </body>
   );
 }
 

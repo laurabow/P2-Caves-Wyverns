@@ -32,24 +32,24 @@ export default function Characters(props) {
 
   // return the character options for the player to choose from
   return (
-    <div>
-      <h1>Choose your fighter! Choose wisely...</h1>
-        <ul>
+    <div className="choose">
+      <h1 className="choose-title">Choose your fighter! Choose wisely...</h1>
+        <div className="character-list">
           {characters.map((character) => {
             return (
-              <li key={character.id}>
-                {/* <Link to={'/rules'}> */}
+              // <li id="character-list" key={character.id}>
+                
                 <div id={character.id} onClick={handleClick}>
                     <h2 className="name" id={character.id}>{character.fields?.name}</h2>
                     <img className="picture" id={character.id} style={{width: "200px"}} src={character.fields?.image} alt={character.fields?.name} />
                     <h3 className="class" id={character.id}>{character.fields?.class}</h3>
                     <p className="description" id={character.id}>{character.fields?.description}</p>
                   </div>
-                {/* </Link> */}
-              </li>
+
+              // </li>
             )
           })}
-        </ul>
+        </div>
     </div>
   )
 }

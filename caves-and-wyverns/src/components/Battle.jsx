@@ -3,6 +3,7 @@ import { useNavigate, Link, useParams } from 'react-router-dom';
 import Dice from "react-dice-roll";
 import api from '../services/apiConfig';
 import api2 from '../services/apiConfig/index2';
+import Roller from './Roller';
 // import Health from './Health';
 
 export default function Battle(props) {
@@ -57,12 +58,9 @@ export default function Battle(props) {
         <h3>Life Force: {character.fields?.health}</h3>
       </div>
 
-      {/* <div id="player-dice">
-        <Dice size="70" onRoll={(value) => console.log(value)} />
+      <div id="roller-div">
+        <Roller />
       </div>
-      <div id="monster-dice">
-        <Dice onRoll={(value) => console.log(value)} />
-      </div> */}
 
       {/* if only one monster, don't need to map */}
         <div>

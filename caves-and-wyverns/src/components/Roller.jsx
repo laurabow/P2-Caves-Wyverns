@@ -41,7 +41,7 @@ export default function Roller(props) {
 
   function compare() {
 
-    if (roll.dice1 > roll.dice2) {
+    if (roll.dice1 >= roll.dice2) {
       return (
         console.log("hit")
         // { monster.fields?.health } - value

@@ -29,11 +29,10 @@ a {
 
 #welcome {
   display: flex;
-  /* margin: 500px; */
   margin: 50px 400px 100px 400px;
   padding: 10px;
-  background-color: whitesmoke;
-  opacity: 0.4;
+  background-color: rgb(245, 245, 245, 0.4);
+  /* opacity: 0.4; */
   border-radius: 8px;
 }
 
@@ -44,7 +43,7 @@ a {
   box-shadow: 2px 2px 5px;
 }
 
-/* choose your fighter styling: */
+/* character page styling: */
 
 .choose {
   font-family: "Luxurious Roman", cursive;
@@ -61,10 +60,56 @@ a {
   box-shadow: 4px 4px 5px;
 }
 
+.class {
+  color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .description {
-  background-color: whitesmoke;
-  opacity: 0.4;
+  background-color: rgb(245, 245, 245, 0.4);
+  /* opacity: 0.4; */
   border-radius: 8px;
   margin-left: 150px;
   margin-right: 150px;
+  padding: 5px;
+}
+
+/* contract/rules styling: */
+
+#rules {
+  font-family: "Luxurious Roman", cursive;
+}
+
+#parchment {
+  background-image: url("https://media.istockphoto.com/photos/old-dirty-paper-texture-picture-id1133497899?k=20&m=1133497899&s=612x612&w=0&h=prcfczBW4lvGL2MMa4p5Amptoop924QBgYX_1eJYzoU=");
+  margin-left: 200px;
+  margin-right: 200px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px;
+}
+
+#contract {
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+#help {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#directions {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 50px;
+}
+
+#battle {
+  font-family: "Luxurious Roman", cursive;
+  margin-top: 30px;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
 }

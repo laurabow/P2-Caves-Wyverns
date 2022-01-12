@@ -84,8 +84,8 @@ This schedule will be used to keep track of your progress throughout the week an
 | Day    | Deliverable                                        | Status     |
 | ------ | -------------------------------------------------- | ---------- |
 | Jan 9  | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
-| Jan 10 | Project Approval                                   | Incomplete |
-| Jan 11 | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
+| Jan 10 | Project Approval                                   | Complete   |
+| Jan 11 | Core Application Structure (HTML, CSS, etc.)       | Complete   |
 | Jan 14 | Pseudocode / actual code                           | Incomplete |
 | Jan 15 | Initial Clickable Model                            | Incomplete |
 | Jan 16 | MVP                                                | Incomplete |
@@ -99,14 +99,14 @@ Time frames are also key in the development cycle. You have limited time to code
 
 | Component                        | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Adding Form                      |    H     |      1hrs      |      hrs      |     hrs     |
-| Working with API                 |    H     |      2hrs      |      hrs      |     hrs     |
-| Basic component Set up           |    H     |      2hr       |               |             |
-| Fetch PC data                    |    H     |      4hr       |               |             |
-| Create/fetch NPC data            |    H     |      4hrs      |               |             |
-| Routes/Route setup               |    H     |      2hrs      |               |             |
+| Adding Form                      |    H     |      1hrs      |     1hrs      |     hrs     |
+| Working with API                 |    H     |      2hrs      |     2hrs      |     hrs     |
+| Basic component Set up           |    H     |      2hr       |     2hrs      |             |
+| Fetch PC data                    |    H     |      4hr       |     4hrs      |             |
+| Create/fetch NPC data            |    H     |      4hrs      |     4hrs      |             |
+| Routes/Route setup               |    H     |      2hrs      |      1hr      |             |
 | Basic Styling for home           |    H     |      4hrs      |               |             |
-| Set up Battle Page               |    L     |      4hrs      |               |             |
+| Set up Battle Page               |    L     |      4hrs      |     4hrs      |             |
 | Dice Mechanics for PC            |    H     |      5hrs      |               |             |
 | NPC Dice Mechanices              |    H     |      5hrs      |               |             |
 | Score keeping/Win & Lose Message |    H     |      4hrs      |               |             |

@@ -102,17 +102,17 @@ Time frames are also key in the development cycle. You have limited time to code
 | Adding Form                      |    H     |      1hrs      |     1hrs      |     hrs     |
 | Working with API                 |    H     |      2hrs      |     2hrs      |     hrs     |
 | Basic component Set up           |    H     |      2hr       |     2hrs      |             |
-| Fetch PC data                    |    H     |      4hr       |     4hrs      |             |
-| Create/fetch NPC data            |    H     |      4hrs      |     4hrs      |             |
+| Fetch PC data                    |    H     |      4hr       |     2hrs      |             |
+| Create/fetch NPC data            |    H     |      4hrs      |     3hrs      |             |
 | Routes/Route setup               |    H     |      2hrs      |      1hr      |             |
 | Basic Styling for home           |    H     |      4hrs      |               |             |
 | Set up Battle Page               |    L     |      4hrs      |     4hrs      |             |
-| Dice Mechanics for PC            |    H     |      5hrs      |               |             |
-| NPC Dice Mechanices              |    H     |      5hrs      |               |             |
+| Dice Mechanics (compare)         |    H     |      5hrs      |     6hrs      |             |
+| Dice Mechanics (affect health)   |    H     |      5hrs      |               |             |
 | Score keeping/Win & Lose Message |    H     |      4hrs      |               |             |
 | Battlefield Styling              |    H     |      4hrs      |               |             |
 | Nav Bar for pages                |    H     |      3hrs      |               |             |
-| Styling!!!                       |    H     |      2hrs      |               |             |
+| Styling!!!                       |    H     |      4hrs      |               |             |
 | Total                            |    H     |     44hrs      |               |             |
 | Total                            |    H     |      hrs       |      hrs      |     hrs     |
 

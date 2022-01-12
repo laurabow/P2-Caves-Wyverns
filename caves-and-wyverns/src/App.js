@@ -4,10 +4,12 @@ import Characters from "./components/Characters";
 import WelcomePage from "./components/WelcomePage";
 import Rules from "./components/Rules";
 import Battle from "./components/Battle";
+import Roller from "./components/Roller";
 // import api from "./services/apiConfig";
-// import Dice from "react-dice-roll";
+
 
 import './App.css';
+
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
         <Route path={"/characters"} element={<Characters setChosenCharacter={setChosenCharacter} />} />
         <Route path={"/rules"} element={<Rules />} />
         <Route path={"/battle"} element={<Battle chosenCharacter={chosenCharacter} />} />
+        <Route path={"/roller"} element={<Roller />} />
       </Routes>
     </div>
   );

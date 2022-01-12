@@ -1,13 +1,16 @@
-// import React from 'react'
-// import Dice from "react-dice-roll";
+import React from 'react'
+import Dice from 'react-dice-roll';
+import api from '../services/apiConfig';
+import api2 from '../services/apiConfig/index2';
 
-// import React from 'react'
+export default function Roller() {
 
-// export default function DiceRoller() {
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
 
+
+  return (
+    <div>
+      <h1>Dice Roller</h1>
+      <Dice size="70" onRoll={(value) => console.log(value)} />
+    </div>
+  )
+}

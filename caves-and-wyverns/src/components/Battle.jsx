@@ -57,12 +57,12 @@ export default function Battle(props) {
         <h3>Life Force: {character.fields?.health}</h3>
       </div>
 
-      <div id="player-dice">
-      <Dice size="70" onRoll={(value) => console.log(value)} />
+      {/* <div id="player-dice">
+        <Dice size="70" onRoll={(value) => console.log(value)} />
       </div>
       <div id="monster-dice">
-      {/* <Dice onRoll={(value) => console.log(value)} /> */}
-      </div>
+        <Dice onRoll={(value) => console.log(value)} />
+      </div> */}
 
       {/* if only one monster, don't need to map */}
         <div>

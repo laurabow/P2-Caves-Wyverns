@@ -113,3 +113,47 @@ a {
   border-radius: 8px;
   box-shadow: 2px 2px 5px;
 }
+
+/* Battle Styling: NOT DONE YET! */
+
+#body-div {
+  font-family: "Luxurious Roman", cursive;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.battle-pic {
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px;
+}
+
+#pc-health {
+  background-color: rgb(245, 245, 245, 0.4);
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 8px;
+}
+
+.monster-pic {
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px;
+}
+
+.monster-class {
+  background-color: rgb(245, 245, 245, 0.4);
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 8px;
+}
+
+.monster-health {
+  background-color: rgb(245, 245, 245, 0.4);
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 8px;
+}
+
+.monster-description {
+  background-color: rgb(245, 245, 245, 0.4);
+  border-radius: 8px;
+}

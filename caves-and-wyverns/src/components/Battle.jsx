@@ -51,36 +51,34 @@ export default function Battle(props) {
   return (
     <div>
       <h1>Wind Hollow Cave</h1>
-
-      <div>
-        <h2 className="battle-name" id={character.id}>{character.fields?.name}</h2>
-        <img className="battle-pic" style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
-        <h3>Life Force: {character.fields?.health}</h3>
-      </div>
-
-      <div id="roller-div">
-        <Roller />
-      </div>
-
-      {/* if only one monster, don't need to map */}
+      <div id="body-div">
         <div>
-          {monster.map((monster) => {
-            return (
-              
-                <div key={monster.id}>
-                  <h2 id="monster-name">{monster.fields?.name}</h2>
-                  <img className="monster-pic" id={monster.id} style={{width: "200px"}} src={monster.fields?.image} alt={monster.fields?.name} />
-                <h3 className="monster-class">{monster.fields?.class}</h3>
-                <h3>{monster.fields?.health}</h3>
-                  <p className="monster-description">{monster.fields?.description}</p>
-                </div>
-              )
-            })}
+          <h2 className="battle-name" id={character.id}>{character.fields?.name}</h2>
+          <img className="battle-pic" style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
+          <h3 id="pc-health">Life Force: {character.fields?.health}</h3>
         </div>
-{/* potential new button to roll dice on click: */}
-      {/* <button id="attack-btn" onRoll={onRoll}>Attack!</button> */}
-      {/* <button id="attack-btn">Attack!</button> */}
-      <button onClick={handleClick}>go home placeholder button</button>
+
+        <div id="roller-div">
+          <Roller />
+        </div>
+
+        {/* if only one monster, don't need to map */}
+          <div>
+            {monster.map((monster) => {
+              return (
+                
+                  <div key={monster.id}>
+                    <h2 id="monster-name">{monster.fields?.name}</h2>
+                    <img className="monster-pic" id={monster.id} style={{width: "200px"}} src={monster.fields?.image} alt={monster.fields?.name} />
+                  <h3 className="monster-class">{monster.fields?.class}</h3>
+                  <h3 className="monster-health">{monster.fields?.health}</h3>
+                    <p className="monster-description">{monster.fields?.description}</p>
+                  </div>
+                )
+              })}
+          </div>
+        <button onClick={handleClick}>go home placeholder button</button>
+      </div>
     </div>
   )
 }

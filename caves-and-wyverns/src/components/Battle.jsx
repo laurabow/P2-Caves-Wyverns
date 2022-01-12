@@ -81,7 +81,7 @@ export default function Battle(props) {
         </div>
 {/* potential new button to roll dice on click: */}
       {/* <button id="attack-btn" onRoll={onRoll}>Attack!</button> */}
-      <button id="attack-btn">Attack!</button>
+      {/* <button id="attack-btn">Attack!</button> */}
       <button onClick={handleClick}>go home placeholder button</button>
     </div>
   )

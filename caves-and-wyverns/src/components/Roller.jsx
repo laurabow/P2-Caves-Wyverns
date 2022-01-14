@@ -90,13 +90,14 @@ export default function Roller(props) {
     <div>
       <h1>Dice Roller</h1>
       <button id="attack-btn" onClick={onRoll}>Attack!</button>
-      <div ref={diceRef} className="test" style={{ pointerEvents: "none" }}>
-        <Dice size="70" onRoll={(value) => roller(value, "dice1")}/>
-        
-      </div>
-      <div ref={diceRef2} className="test" style={{ pointerEvents: "none" }}>
-      <Dice size="70" onRoll={(value) => roller(value, "dice2")}/>
+      <div className="dice-div">
+        <div ref={diceRef} className="player-dice" style={{ pointerEvents: "none" }}>
+          <Dice size="70" onRoll={(value) => roller(value, "dice1")}/>
         </div>
+        <div ref={diceRef2} className="monster-dice" style={{ pointerEvents: "none" }}>
+          <Dice size="70" onRoll={(value) => roller(value, "dice2")}/>
+        </div>
+      </div>
     </div>
   )
 }

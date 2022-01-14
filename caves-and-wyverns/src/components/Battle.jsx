@@ -18,10 +18,10 @@ export default function Battle(props) {
   const navigate = useNavigate();
 
   // substitue in a funciton that checks player and monster health:
-  const handleClick = async (e) => {
-    e.preventDefault();
-    navigate("/");
-  };
+  // const handleClick = async (e) => {
+  //   e.preventDefault();
+  //   navigate("/");
+  // };
 
 
   useEffect(() => {
@@ -88,7 +88,7 @@ export default function Battle(props) {
                 )
               })}
           </div>
-        <button onClick={handleClick}>go home placeholder button</button>
+        {/* <button onClick={handleClick}>go home placeholder button</button> */}
       </div>
     </div>
   )

@@ -158,3 +158,26 @@ a {
   background-color: rgb(245, 245, 245, 0.4);
   border-radius: 8px;
 }
+
+/* Dice Styling: */
+
+#attack-btn {
+  font-family: "Luxurious Roman", cursive;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+  margin: 10px;
+}
+
+.dice-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.player-dice {
+  margin: 20px;
+}
+
+.monster-dice {
+  margin: 20px;
+}

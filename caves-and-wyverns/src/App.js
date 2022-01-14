@@ -5,6 +5,7 @@ import WelcomePage from "./components/WelcomePage";
 import Rules from "./components/Rules";
 import Battle from "./components/Battle";
 import Roller from "./components/Roller";
+import Win from "./components/Win";
 // import api from "./services/apiConfig";
 
 

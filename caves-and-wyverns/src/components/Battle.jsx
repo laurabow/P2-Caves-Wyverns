@@ -10,8 +10,8 @@ export default function Battle(props) {
 
   const [monster, setMonster] = useState([]);
   const [character, setCharacter] = useState({});
-  const [characterHealth, setCharacterHealth] = useState(null);
-  const [monsterHealth, setMonsterHealth] = useState(null);
+  const [characterHealth, setCharacterHealth] = useState(50);
+  const [monsterHealth, setMonsterHealth] = useState(50);
   const { id } = useParams();
 
   const navigate = useNavigate();
@@ -51,20 +51,7 @@ export default function Battle(props) {
     fetchCharacter();
   }, [props.chosenCharacter]);
 
-  // useEffect(() => {
-  //   const checkHealth = async () => {
-  //     if (characterHealth <= 0 && monsterHealth != 0) {
-  //       navigate("/lose")
-  //     } else if (monsterHealth <= 0 && characterHealth != 0) {
-  //       navigate("/win");
-  //     } 
-  //     // } else {
-  //     //   // stay at battle page somehow
-
-  //     // }
-  //   }
-  //   checkHealth();
-  // })
+  // check health goes here?
 
   // returns the image & name of the chosen character
   return (

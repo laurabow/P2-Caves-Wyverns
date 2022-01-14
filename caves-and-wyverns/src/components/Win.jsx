@@ -7,11 +7,11 @@ export default function WinOrLose() {
 
   const navigate = useNavigate();
 
-  // const [legends, setLegends] = useState();
+  // const [legends, setLegends] = useState([]);
 
   // useEffect(() => {
   //   const fetchName = async () => {
-  //     const res = await api3.get("/");
+  //     const res = await api3.get();
   //     console.log(res.data.records);
   //     setLegends(res.data.records);
   //   }
@@ -23,14 +23,18 @@ export default function WinOrLose() {
     navigate("/");
   };
 
+  // on submit function for form goes here or something
+
   return (
     <div>
       <h1>You Win!!! You defeated the Moldscreamer!</h1>
       <h2>Add your name to the List of Legends, so your victory will always be remembered.</h2>
       <button onClick={handleClick}>Go to Home</button>
+      <br />
       <form>
         <label>Name: </label>
         <input id="name" placeholder='Add your name' />
+        <button>Add Name</button>
       </form>
       {/* <div id="legends">
         {legends.map((legend) => {

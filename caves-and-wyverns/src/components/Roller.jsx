@@ -75,16 +75,16 @@ export default function Roller(props) {
     setRoll({ dice1: null, dice2: null });
   }
 
-  // useEffect(() => {
-  //   const checkHealth = async () => {
-  //     if (props.characterHealth <= 0 && props.monsterHealth != 0) {
-  //       navigate("/lose")
-  //     } else if (props.monsterHealth <= 0 && props.characterHealth != 0) {
-  //       navigate("/win");
-  //     }
-  //   }
-  //   checkHealth();
-  // }, [onRoll]);
+  useEffect(() => {
+    // const checkHealth = async () => {
+      if (props.characterHealth <= 0 && props.monsterHealth !== 0) {
+        navigate("/lose")
+      } else if (props.monsterHealth <= 0 && props.characterHealth !== 0) {
+        navigate("/win");
+      }
+    // }
+    // checkHealth();
+  }, [roll]);
 
   return (
     <div>

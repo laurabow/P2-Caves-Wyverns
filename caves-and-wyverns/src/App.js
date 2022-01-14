@@ -11,7 +11,6 @@ import Roller from "./components/Roller";
 import './App.css';
 
 
-
 function App() {
 
   const [chosenCharacter, setChosenCharacter] = useState({});
@@ -23,16 +22,16 @@ function App() {
 
   return (
     <body className="body">
-    <div className="App">
-      <Routes>
-        <Route path={"/"} element={<WelcomePage />} />
-        <Route path={"/characters"} element={<Characters setChosenCharacter={setChosenCharacter} />} />
-        <Route path={"/rules"} element={<Rules />} />
-        <Route path={"/battle"} element={<Battle chosenCharacter={chosenCharacter} />} />
-        <Route path={"/roller"} element={<Roller />} />
-      </Routes>
+      <div className="App">
+        <Routes>
+          <Route path={"/"} element={<WelcomePage />} />
+          <Route path={"/characters"} element={<Characters setChosenCharacter={setChosenCharacter} />} />
+          <Route path={"/rules"} element={<Rules />} />
+          <Route path={"/battle"} element={<Battle chosenCharacter={chosenCharacter} />} />
+          <Route path={"/roller"} element={<Roller />} />
+        </Routes>
       </div>
-      </body>
+    </body>
   );
 }
 

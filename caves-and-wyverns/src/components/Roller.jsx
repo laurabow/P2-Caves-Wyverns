@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Dice from 'react-dice-roll';
 import api from '../services/apiConfig';
 import api2 from '../services/apiConfig/index2';
 
 export default function Roller(props) {
+
+  const navigate = useNavigate();
 
   const diceRef = useRef(null);
   const diceRef2 = useRef(null);
@@ -72,6 +75,16 @@ export default function Roller(props) {
     setRoll({ dice1: null, dice2: null });
   }
 
+  // useEffect(() => {
+  //   const checkHealth = async () => {
+  //     if (props.characterHealth <= 0 && props.monsterHealth != 0) {
+  //       navigate("/lose")
+  //     } else if (props.monsterHealth <= 0 && props.characterHealth != 0) {
+  //       navigate("/win");
+  //     }
+  //   }
+  //   checkHealth();
+  // }, [onRoll]);
 
   return (
     <div>

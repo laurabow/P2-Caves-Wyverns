@@ -44,13 +44,12 @@ export default function Battle(props) {
         return record.id === props.chosenCharacter;
       })
       setCharacter(character);
+      setCharacterHealth(character.fields.health);
     }
     fetchCharacter();
   }, [props.chosenCharacter]);
 
-  // const onRoll = () => {
-  //   if ()
-  // }
+  
 
   // returns the image & name of the chosen character
   return (
@@ -60,7 +59,7 @@ export default function Battle(props) {
         <div>
           <h2 className="battle-name" id={character.id}>{character.fields?.name}</h2>
           <img className="battle-pic" style={{ width: "200px" }} src={character.fields?.image} alt={character.fields?.name} />
-          <h3 id="pc-health">Life Force: {character.fields?.health}</h3>
+          <h3 id="pc-health">Life Force: {characterHealth}</h3>
         </div>
 
         <div id="roller-div">

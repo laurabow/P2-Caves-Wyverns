@@ -12,8 +12,6 @@ export default function Roller(props) {
   const [roll, setRoll] = useState({ dice1: null, dice2: null });
   const [monster, setMonster] = useState([]);
   const [character, setCharacter] = useState({});
-  const [roll1Toggle, setroll1Toggle] = useState(false);
-  const [roll2Toggle, setroll2Toggle] = useState(false);
   
 
   useEffect(() => {
@@ -51,22 +49,16 @@ export default function Roller(props) {
       diceRef2.current.style.pointerEvents = "none";
       // console.log(value);
     }
-    setToggle(prevToggle => !prevToggle);
   };
 
   useEffect(() => {
-    // if (roll.dice1 && roll.dice2) {
-    //   compare();
-    // }
+    if (roll.dice1 && roll.dice2) {
+      compare();
+    }
   }, [roll]);
 
   const roller = (value, currentDice) => {
     setRoll((prevState) => ({ ...prevState, [currentDice]: value }));
-    if (currentDice === "dice1") {
-      setroll1Toggle(true);
-    } else {
-      setroll1Toggle(true);
-    }
   }
 
 
@@ -84,6 +76,7 @@ export default function Roller(props) {
       // )
       // handleMonsterHealth();
     } else {
+      props.setCharacterHealth(props.characterHealth - roll.dice2)
       // return (
         // console.log("miss")
         
@@ -91,6 +84,7 @@ export default function Roller(props) {
       // )
       // handleCharacterHealth();
     }
+    setRoll({ dice1: null, dice2: null });
   }
   // console.log(monsterHealth);
 

@@ -12,6 +12,8 @@ export default function Roller(props) {
   const [roll, setRoll] = useState({ dice1: null, dice2: null });
   const [monster, setMonster] = useState([]);
   const [character, setCharacter] = useState({});
+  const [roll1Toggle, setroll1Toggle] = useState(false);
+  const [roll2Toggle, setroll2Toggle] = useState(false);
   
 
   useEffect(() => {
@@ -49,39 +51,30 @@ export default function Roller(props) {
       diceRef2.current.style.pointerEvents = "none";
       // console.log(value);
     }
+    setToggle(prevToggle => !prevToggle);
   };
 
   useEffect(() => {
-    if (roll.dice1 && roll.dice2) {
-      compare();
-    }
+    // if (roll.dice1 && roll.dice2) {
+    //   compare();
+    // }
   }, [roll]);
 
   const roller = (value, currentDice) => {
     setRoll((prevState) => ({ ...prevState, [currentDice]: value }));
+    if (currentDice === "dice1") {
+      setroll1Toggle(true);
+    } else {
+      setroll1Toggle(true);
+    }
   }
 
-  // const handleCharacterHealth = async(e) => {
-  //   e.preventDefault();
-  //   // const fields = input;
-  //   const res = await api.patch('/${id}', { fields });
-  //   console.log(res.data)
-  //   setCharacterHealth({ characterHealth } - roll.dice2);
-
-  // }
-
-  // const handleMonsterHealth = async(e) => {
-  //   e.preventDefault();
-  //   // const fields = input;
-  //   const res = await api.patch('/${id}', { fields });
-  //   console.log(res.data)
-  //   setCharacterHealth({ monsterHealth } - roll.dice1);
-  // }
 
   function compare() {
-
+    console.log(roll.dice1);
+    console.log(roll.dice2);
     if (roll.dice1 >= roll.dice2) {
-      // setMonsterHealth(monsterHealth - roll.dice1)
+      props.setMonsterHealth(props.monsterHealth - roll.dice1)
       
       // return (
 

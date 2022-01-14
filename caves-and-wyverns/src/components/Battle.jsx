@@ -27,9 +27,13 @@ export default function Battle(props) {
       const res = await api2.get();
       console.log(res.data);
       setMonster(res.data.records);
+      setMonsterHealth(res.data.records[0].fields.health);
     }
     fetchMonster();
-    setMonsterHealth(monster.fields);
+    const setInitialMonsterHealth = () => {
+      
+    }
+    setInitialMonsterHealth();
   }, []);
   console.log(monsterHealth);
   // fetches the character chose by the player:
@@ -60,7 +64,11 @@ export default function Battle(props) {
         </div>
 
         <div id="roller-div">
-          <Roller />
+          <Roller
+            monsterHealth={monsterHealth}
+            setMonsterHealth={setMonsterHealth}
+            characterHealth={characterHealth}
+            setCharacterHealth={setCharacterHealth} />
         </div>
 
         {/* if only one monster, don't need to map */}
@@ -72,7 +80,7 @@ export default function Battle(props) {
                     <h2 id="monster-name">{monster.fields?.name}</h2>
                     <img className="monster-pic" id={monster.id} style={{width: "200px"}} src={monster.fields?.image} alt={monster.fields?.name} />
                   <h3 className="monster-class">{monster.fields?.class}</h3>
-                  <h3 className="monster-health">{monster.fields?.health}</h3>
+                  <h3 className="monster-health">{monsterHealth}</h3>
                     <p className="monster-description">{monster.fields?.description}</p>
                   </div>
                 )

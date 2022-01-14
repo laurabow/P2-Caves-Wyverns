@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, Link, useParams } from 'react-router-dom';
-import Dice from "react-dice-roll";
+import { useNavigate, useParams } from 'react-router-dom';
+// import Dice from "react-dice-roll";
 import api from '../services/apiConfig';
 import api2 from '../services/apiConfig/index2';
 import Roller from './Roller';

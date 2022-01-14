@@ -10,6 +10,8 @@ export default function Battle(props) {
 
   const [monster, setMonster] = useState([]);
   const [character, setCharacter] = useState({});
+  const [characterHealth, setCharacterHealth] = useState(null);
+  const [monsterHealth, setMonsterHealth] = useState(null);
   const { id } = useParams();
 
   const navigate = useNavigate();
@@ -19,9 +21,7 @@ export default function Battle(props) {
     navigate("/");
   };
 
-  // need to ad .post for player character selection somewhere
 
-  // this is coming up as undefined...
   useEffect(() => {
     const fetchMonster = async () => {
       const res = await api2.get();
@@ -29,8 +29,9 @@ export default function Battle(props) {
       setMonster(res.data.records);
     }
     fetchMonster();
+    setMonsterHealth(monster.fields);
   }, []);
-
+  console.log(monsterHealth);
   // fetches the character chose by the player:
   useEffect(() => {
     const fetchCharacter = async () => {

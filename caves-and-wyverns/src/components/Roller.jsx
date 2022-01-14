@@ -6,15 +6,13 @@ import api2 from '../services/apiConfig/index2';
 
 export default function Roller(props) {
 
-  // const [health, setHealth] = useState();
   const diceRef = useRef(null);
   const diceRef2 = useRef(null);
 
   const [roll, setRoll] = useState({ dice1: null, dice2: null });
   const [monster, setMonster] = useState([]);
   const [character, setCharacter] = useState({});
-  const [characterHealth, setCharacterHealth] = useState(50);
-  const [monsterHealth, setMonsterHealth] = useState(50);
+  
 
   useEffect(() => {
     const fetchMonster = async () => {
@@ -65,38 +63,43 @@ export default function Roller(props) {
 
   // const handleCharacterHealth = async(e) => {
   //   e.preventDefault();
-  //   const fields = input;
+  //   // const fields = input;
   //   const res = await api.patch('/${id}', { fields });
   //   console.log(res.data)
-  //   setCharacterHealth({ character.fields?.health } - roll.dice2);
+  //   setCharacterHealth({ characterHealth } - roll.dice2);
 
   // }
 
   // const handleMonsterHealth = async(e) => {
   //   e.preventDefault();
-  //   const fields = input;
+  //   // const fields = input;
   //   const res = await api.patch('/${id}', { fields });
   //   console.log(res.data)
-  //   setCharacterHealth({ monster.fields?.health } - roll.dice1);
-
+  //   setCharacterHealth({ monsterHealth } - roll.dice1);
   // }
 
   function compare() {
 
     if (roll.dice1 >= roll.dice2) {
-      return (
-        console.log("hit")
-        // handleMonsterHealth();
-        // health decrement function goes here?
-      )
+      // setMonsterHealth(monsterHealth - roll.dice1)
+      
+      // return (
+
+        // console.log("hit")
+        
+      //   // health decrement function goes here?
+      // )
+      // handleMonsterHealth();
     } else {
-      return (
-        console.log("miss")
-        // handleCharacterHealth();
-        // health decrement function goes here?
-      )
+      // return (
+        // console.log("miss")
+        
+      //   // health decrement function goes here?
+      // )
+      // handleCharacterHealth();
     }
   }
+  // console.log(monsterHealth);
 
   return (
     <div>
@@ -114,4 +117,3 @@ export default function Roller(props) {
 }
 
 
-// onRoll={(value) => console.log(value)}

@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import Dice from 'react-dice-roll';
 import api from '../services/apiConfig';
 import api2 from '../services/apiConfig/index2';
-// import MonsterRoller from './MonsterRoller';
 
 export default function Roller(props) {
 
@@ -67,26 +66,12 @@ export default function Roller(props) {
     console.log(roll.dice2);
     if (roll.dice1 >= roll.dice2) {
       props.setMonsterHealth(props.monsterHealth - roll.dice1)
-      
-      // return (
-
-        // console.log("hit")
-        
-      //   // health decrement function goes here?
-      // )
-      // handleMonsterHealth();
     } else {
       props.setCharacterHealth(props.characterHealth - roll.dice2)
-      // return (
-        // console.log("miss")
-        
-      //   // health decrement function goes here?
-      // )
-      // handleCharacterHealth();
     }
     setRoll({ dice1: null, dice2: null });
   }
-  // console.log(monsterHealth);
+
 
   return (
     <div>

@@ -16,6 +16,7 @@ export default function Battle(props) {
 
   const navigate = useNavigate();
 
+  // substitue in a funciton that checks player and monster health:
   const handleClick = async (e) => {
     e.preventDefault();
     navigate("/");
@@ -36,6 +37,7 @@ export default function Battle(props) {
     setInitialMonsterHealth();
   }, []);
   console.log(monsterHealth);
+
   // fetches the character chose by the player:
   useEffect(() => {
     const fetchCharacter = async () => {
@@ -49,7 +51,15 @@ export default function Battle(props) {
     fetchCharacter();
   }, [props.chosenCharacter]);
 
-  
+  useEffect(() => {
+    if (characterHealth <= 0) {
+      // go to lose page
+    } else if (monsterHealth <= 0) {
+      // go to win page
+    } else {
+      // stay at battle page
+    }
+  })
 
   // returns the image & name of the chosen character
   return (

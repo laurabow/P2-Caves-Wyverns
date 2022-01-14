@@ -63,36 +63,36 @@ export default function Roller(props) {
     setRoll((prevState) => ({ ...prevState, [currentDice]: value }));
   }
 
-  const handleCharacterHealth = async(e) => {
-    e.preventDefault();
-    const fields = input;
-    const res = await api.patch('/${id}', { fields });
-    console.log(res.data)
-    setCharacterHealth({ character.fields?.health } - roll.dice2);
+  // const handleCharacterHealth = async(e) => {
+  //   e.preventDefault();
+  //   const fields = input;
+  //   const res = await api.patch('/${id}', { fields });
+  //   console.log(res.data)
+  //   setCharacterHealth({ character.fields?.health } - roll.dice2);
 
-  }
+  // }
 
-  const handleMonsterHealth = async(e) => {
-    e.preventDefault();
-    const fields = input;
-    const res = await api.patch('/${id}', { fields });
-    console.log(res.data)
-    setCharacterHealth({ monster.fields?.health } - roll.dice1);
+  // const handleMonsterHealth = async(e) => {
+  //   e.preventDefault();
+  //   const fields = input;
+  //   const res = await api.patch('/${id}', { fields });
+  //   console.log(res.data)
+  //   setCharacterHealth({ monster.fields?.health } - roll.dice1);
 
-  }
+  // }
 
   function compare() {
 
     if (roll.dice1 >= roll.dice2) {
       return (
         console.log("hit")
-        handleMonsterHealth();
+        // handleMonsterHealth();
         // health decrement function goes here?
       )
     } else {
       return (
         console.log("miss")
-        handleCharacterHealth();
+        // handleCharacterHealth();
         // health decrement function goes here?
       )
     }

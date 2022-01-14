@@ -35,11 +35,11 @@ export default function Characters(props) {
     <div className="choose">
       <h1 className="choose-title">Choose your fighter! Choose wisely...</h1>
         <div className="character-list">
-          {characters.map((character) => {
+          {characters.map((character, index) => {
             return (
               // <li id="character-list" key={character.id}>
                 
-                <div id={character.id} onClick={handleClick}>
+                <div id={character.id} key={index} onClick={handleClick}>
                     <h2 className="name" id={character.id}>{character.fields?.name}</h2>
                     <img className="picture" id={character.id} style={{width: "200px"}} src={character.fields?.image} alt={character.fields?.name} />
                     <h3 className="class" id={character.id}>{character.fields?.class}</h3>

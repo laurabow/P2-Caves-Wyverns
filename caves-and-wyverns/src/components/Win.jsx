@@ -7,23 +7,23 @@ export default function WinOrLose() {
 
   const navigate = useNavigate();
 
-  // const [legends, setLegends] = useState([]);
+  const [legends, setLegends] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchName = async () => {
-  //     const res = await api3.get();
-  //     console.log(res.data.records);
-  //     setLegends(res.data.records);
-  //   }
-  //   fetchName();
-  // }, []);
+  useEffect(() => {
+    const fetchName = async () => {
+      const res = await api3.get();
+      console.log(res.data.records.name);
+      setLegends(res.data.records.name);
+    }
+    fetchName();
+  }, []);
 
   const handleClick = async (e) => {
     e.preventDefault();
     navigate("/");
   };
 
-  // on submit function for form goes here or something
+  // on submit function for form goes here maybe
 
   return (
     <div>

@@ -10,8 +10,9 @@ export default function Battle(props) {
 
   const [monster, setMonster] = useState([]);
   const [character, setCharacter] = useState({});
-  const [characterHealth, setCharacterHealth] = useState(50);
-  const [monsterHealth, setMonsterHealth] = useState(50);
+  // changed health from 50 to 15 to save time while testing (both in code and in airtables)
+  const [characterHealth, setCharacterHealth] = useState(15);
+  const [monsterHealth, setMonsterHealth] = useState(15);
   const { id } = useParams();
 
   const navigate = useNavigate();

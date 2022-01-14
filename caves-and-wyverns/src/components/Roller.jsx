@@ -10,7 +10,31 @@ export default function Roller(props) {
   const diceRef = useRef(null);
   const diceRef2 = useRef(null);
 
-  const [roll, setRoll] = useState({dice1: null, dice2: null});
+  const [roll, setRoll] = useState({ dice1: null, dice2: null });
+  const [monster, setMonster] = useState([]);
+  const [character, setCharacter] = useState({});
+  const [characterHealth, setCharacterHealth] = useState(50);
+  const [monsterHealth, setMonsterHealth] = useState(50);
+
+  useEffect(() => {
+    const fetchMonster = async () => {
+      const res = await api2.get();
+      console.log(res.data);
+      setMonster(res.data.records);
+    }
+    fetchMonster();
+  }, []);
+
+  useEffect(() => {
+    const fetchCharacter = async () => {
+      const res = await api.get("/");
+      const character = res.data.records.find((record) => {
+        return record.id === props.chosenCharacter;
+      })
+      setCharacter(character);
+    }
+    fetchCharacter();
+  }, [props.chosenCharacter]);
 
   const onRoll = (value) => {
     if (diceRef && diceRef.current) {
@@ -39,18 +63,36 @@ export default function Roller(props) {
     setRoll((prevState) => ({ ...prevState, [currentDice]: value }));
   }
 
+  const handleCharacterHealth = async(e) => {
+    e.preventDefault();
+    const fields = input;
+    const res = await api.patch('/${id}', { fields });
+    console.log(res.data)
+    setCharacterHealth({ character.fields?.health } - roll.dice2);
+
+  }
+
+  const handleMonsterHealth = async(e) => {
+    e.preventDefault();
+    const fields = input;
+    const res = await api.patch('/${id}', { fields });
+    console.log(res.data)
+    setCharacterHealth({ monster.fields?.health } - roll.dice1);
+
+  }
+
   function compare() {
 
     if (roll.dice1 >= roll.dice2) {
       return (
         console.log("hit")
-        // { monster.fields?.health } - value
+        handleMonsterHealth();
         // health decrement function goes here?
       )
     } else {
       return (
         console.log("miss")
-        // {character.fields?.health} - value
+        handleCharacterHealth();
         // health decrement function goes here?
       )
     }

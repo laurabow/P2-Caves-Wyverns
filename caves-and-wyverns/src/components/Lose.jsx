@@ -12,9 +12,9 @@ export default function Lose() {
 
   return (
     <div>
-      <h1>YOU DIIIIED</h1>
-      <h3>YOU ARE DEAD HAHAHAHAHAHA</h3>
-      <button onClick={handleClick}>Go to Home</button>
+      <h1 id="death-notice">YOU DIED!!!!</h1>
+      <h3 id="obit">YOU ARE DEAD HAHAHAHAHAHA</h3>
+      <button id="dead-btn" onClick={handleClick}>Go to Home</button>
     </div>
   )
 }

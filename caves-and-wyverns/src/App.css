@@ -33,7 +33,6 @@ a {
   margin: 50px 400px 100px 400px;
   padding: 10px;
   background-color: rgb(245, 245, 245, 0.4);
-  /* opacity: 0.4; */
   border-radius: 8px;
 }
 
@@ -239,4 +238,26 @@ a {
   padding: 6px;
   border-radius: 8px;
   box-shadow: 2px 2px 5px;
+}
+
+/* welcome page starts looking weird here: */
+@media only screen and (max-width: 1094px) {
+  #welcome {
+    display: flex;
+    margin: 20px 300px 50px 300px;
+    padding: 10px;
+    background-color: rgb(245, 245, 245, 0.4);
+    border-radius: 8px;
+  }
+}
+
+/* tablet screen media query */
+@media only screen and (max-width: 850px) {
+  #welcome {
+    display: flex;
+    margin: 10px 200px 40px 200px;
+    padding: 10px;
+    background-color: rgb(245, 245, 245, 0.4);
+    border-radius: 8px;
+  }
 }

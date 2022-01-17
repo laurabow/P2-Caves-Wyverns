@@ -67,7 +67,6 @@ a {
 
 .description {
   background-color: rgb(245, 245, 245, 0.4);
-  /* opacity: 0.4; */
   border-radius: 8px;
   margin-left: 150px;
   margin-right: 150px;
@@ -259,5 +258,24 @@ a {
     padding: 10px;
     background-color: rgb(245, 245, 245, 0.4);
     border-radius: 8px;
+  }
+
+  .description {
+    background-color: rgb(245, 245, 245, 0.4);
+    border-radius: 8px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 5px;
+  }
+
+  #parchment {
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 5px;
+  }
+
+  #battle {
+    margin-top: 5px;
   }
 }

@@ -115,7 +115,7 @@ a {
   box-shadow: 2px 2px 5px;
 }
 
-/* Battle Styling: NOT DONE YET! */
+/* Battle Styling: */
 
 #body-div {
   font-family: "Luxurious Roman", cursive;
@@ -181,3 +181,42 @@ a {
 .monster-dice {
   margin: 20px;
 }
+
+/* Win styling: */
+
+#win-home {
+  font-family: "Luxurious Roman", cursive;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+  margin: 10px;
+}
+
+#name-btn {
+  font-family: "Luxurious Roman", cursive;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+  margin: 10px;
+}
+
+#name-label {
+  margin: 5px;
+}
+
+#add-name {
+  font-family: "Luxurious Roman", cursive;
+  padding: 5px;
+}
+
+#legends {
+  background-image: url("https://media.istockphoto.com/photos/old-dirty-paper-texture-picture-id1133497899?k=20&m=1133497899&s=612x612&w=0&h=prcfczBW4lvGL2MMa4p5Amptoop924QBgYX_1eJYzoU=");
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 30px;
+  padding: 1px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px;
+}
+
+/* Lose styling */

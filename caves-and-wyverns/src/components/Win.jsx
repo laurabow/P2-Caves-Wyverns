@@ -43,13 +43,13 @@ export default function WinOrLose() {
     <div>
       <h1>You Win!!! You defeated the Moldscreamer!</h1>
       <h2>Add your name to the List of Legends, so your victory will always be remembered.</h2>
-      <button onClick={handleClick}>Go to Home</button>
+      <button id="win-home" onClick={handleClick}>Go to Home</button>
       <br />
       <form
         onSubmit={handleSubmit}>
-        <label>Name: </label>
-        <input id="name" placeholder='Add your name' value={name} onChange={(e)=> setName(e.target.value)}/>
-        <button>Add Name</button>
+        <label id="name-label">Name: </label>
+        <input id="add-name" placeholder='Add your name' value={name} onChange={(e)=> setName(e.target.value)}/>
+        <button id="name-btn">Add Name</button>
       </form>
       <div id="legends">
         {legends.map((legend, index) => {

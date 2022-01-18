@@ -12,8 +12,8 @@ export default function Roller(props) {
   const diceRef2 = useRef(null);
 
   const [roll, setRoll] = useState({ dice1: null, dice2: null });
-  const [monster, setMonster] = useState([]);
-  const [character, setCharacter] = useState({});
+  const [setMonster] = useState([]);
+  const [setCharacter] = useState({});
   
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Roller(props) {
       setMonster(res.data.records);
     }
     fetchMonster();
-  }, []);
+  }, [setMonster]);
 
   useEffect(() => {
     const fetchCharacter = async () => {
@@ -34,7 +34,7 @@ export default function Roller(props) {
       setCharacter(character);
     }
     fetchCharacter();
-  }, [props.chosenCharacter]);
+  }, [props.chosenCharacter, setCharacter]);
 
   const onRoll = (value) => {
     if (diceRef && diceRef.current) {
@@ -57,6 +57,7 @@ export default function Roller(props) {
     if (roll.dice1 && roll.dice2) {
       compare();
     }
+    // eslint-disable-next-line
   }, [roll]);
 
   const roller = (value, currentDice) => {
@@ -84,7 +85,7 @@ export default function Roller(props) {
       }
     // }
     // checkHealth();
-  }, [roll]);
+  }, [roll, navigate, props.characterHealth, props.monsterHealth]);
 
   return (
     <div>

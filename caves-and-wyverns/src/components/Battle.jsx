@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+// import { useNavigate, useParams } from 'react-router-dom';
 // import Dice from "react-dice-roll";
 import api from '../services/apiConfig';
 import api2 from '../services/apiConfig/index2';
@@ -13,9 +13,9 @@ export default function Battle(props) {
   // changed health from 50 to 15 to save time while testing (both in code and in airtables)
   const [characterHealth, setCharacterHealth] = useState(15);
   const [monsterHealth, setMonsterHealth] = useState(15);
-  const { id } = useParams();
+  // const { id } = useParams();
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // substitue in a funciton that checks player and monster health:
   // const handleClick = async (e) => {

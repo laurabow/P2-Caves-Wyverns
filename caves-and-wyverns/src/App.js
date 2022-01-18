@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Characters from "./components/Characters";
 import WelcomePage from "./components/WelcomePage";

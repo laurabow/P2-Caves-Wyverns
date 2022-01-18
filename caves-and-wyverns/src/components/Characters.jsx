@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import api from '../services/apiConfig';
 
@@ -9,7 +9,7 @@ export default function Characters(props) {
 
   const [characters, setCharacters] = useState([]);
   // const [fighter, setFighter] = useState({});
-  const { id } = useParams();
+  // const { id } = useParams();
 
   // this fetches the characters from the api for the player to choose from
   useEffect(() => {
